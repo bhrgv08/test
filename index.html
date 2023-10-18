@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Feedback Form</title>
+  <!-- Bootstrap CSS link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    /* Additional CSS styling can be added here */
+    /* Customize as per your needs */
+  </style>
+</head>
+<body>
+  <div class="container pb-5">
+    <h1 class="mt-5 mb-4 text-center">Employee Feedback Form</h1>
+
+    <!-- Feedback Form -->
+    <form class="jumbotron col-lg-6">
+
+      <!-- Personal Information Section -->
+      <div class="form-group">
+        <h2>Personal Information (Optional):</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" class="form-control" id="fullName" placeholder="Your Name">
+      </div>
+
+      <div class="form-group">
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" class="form-control" id="jobTitle" placeholder="Your Job Title">
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department:</label>
+        <input type="text" class="form-control" id="department" placeholder="Your Department">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Your Email Address">
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" class="form-control" id="phoneNumber" placeholder="Your Phone Number">
+      </div>
+
+      <!-- Feedback on Reporting Manager(s) and Superior(s) -->
+      <h2 class="mt-4">Feedback on Reporting Manager(s) and Superior(s):</h2>
+
+      <!-- 1. Reporting Manager(s) Feedback -->
+      <div class="form-group">
+        <h3>1. Reporting Manager(s) Feedback:</h3>
+        <label for="reportingManagerName">a) Name of Reporting Manager:</label>
+        <input type="text" class="form-control" id="reportingManagerName" placeholder="Name of Reporting Manager">
+        <label for="rating">b) On a scale of 1-5, how would you rate the overall performance and effectiveness of your reporting manager(s)?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="rating" id="rating1" value="1">
+          <label class="form-check-label" for="rating1">1 - Extremely Poor</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="rating" id="rating2" value="2">
+          <label class="form-check-label" for="rating2">2 - Poor</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="rating" id="rating3" value="3">
+          <label class="form-check-label" for="rating3">3 - Neutral</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="rating" id="rating4" value="4">
+          <label class="form-check-label" for="rating4">4 - Good</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="rating" id="rating5" value="5">
+          <label class="form-check-label" for="rating5">5 - Excellent</label>
+        </div>
+        <label for="strengths">c) What specific strengths or positive aspects would you like to highlight about your reporting manager(s)?</label>
+        <textarea class="form-control" id="strengths" rows="3" placeholder="Enter strengths or positive aspects"></textarea>
+        <label for="improvements">d) What areas for improvement or suggestions do you have for your reporting manager(s)?</label>
+        <textarea class="form-control" id="improvements" rows="3" placeholder="Enter areas for improvement or suggestions"></textarea>
+      </div>
+
+      <!-- 2. Feedback on Other Superiors -->
+      <div class="form-group mt-4">
+        <h3>2. Feedback on Other Superiors:</h3>
+        <label for="otherSuperiorName">a) Name of Superior:</label>
+        <input type="text" class="form-control" id="otherSuperiorName" placeholder="Name of Superior">
+        <label for="otherSuperiorRating">b) On a scale of 1-5, how would you rate the overall performance and effectiveness of this superior?</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="otherSuperiorRating" id="otherRating1" value="1">
+          <label class="form-check-label" for="otherRating1">1 - Extremely Poor</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="otherSuperiorRating" id="otherRating2" value="2">
+          <label class="form-check-label" for="otherRating2">2 - Poor</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="otherSuperiorRating" id="otherRating3" value="3">
+          <label class="form-check-label" for="otherRating3">3 - Neutral</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="otherSuperiorRating" id="otherRating4" value="4">
+          <label class="form-check-label" for="otherRating4">4 - Good</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="otherSuperiorRating" id="otherRating5" value="5">
+          <label class="form-check-label" for="otherRating5">5 - Excellent</label>
+        </div>
+        <label for="otherSuperiorStrengths">c) What specific strengths or positive aspects would you like to highlight about this superior?</label>
+        <textarea class="form-control" id="otherSuperiorStrengths" rows="3" placeholder="Enter strengths or positive aspects"></textarea>
+        <label for="otherSuperiorImprovements">d) What areas for improvement or suggestions do you have for this superior?</label>
+        <textarea class="form-control" id="otherSuperiorImprovements" rows="3" placeholder="Enter areas for improvement or suggestions"></textarea>
+      </div>
+
+      <!-- General Comments and Concerns Section -->
+      <h2 class="mt-4">General Comments and Concerns:</h2>
+
+      <div class="form-group">
+        <label for="generalComments">Please provide any additional comments, concerns, or suggestions related to your work environment, company policies, or any other matter that you would like to share.</label>
+        <textarea class="form-control" id="generalComments" rows="5" placeholder="Enter your comments here"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
